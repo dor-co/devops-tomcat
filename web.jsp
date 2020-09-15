@@ -1,34 +1,31 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%--
+  Created by IntelliJ IDEA.
+  User: Marek
+  Date: 13/04/2017
+  Time: 02:49
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>FirstServlet</title>
-</head>
-<body>
-Enter Username and Email ID using GET method
-<h3>Notice the queryString(uname="name"&email="email" in the URL)</h3>
-<form action="FirstServlet" method="get">
-Username: <input type="text" name="uname"><br/>
-Email ID: <input type="text" name="email"><br/>
-<input type="submit"> <br/>
-</form>
-<br/>
-<br/>
-<br/>
-<br/>
-
-Enter Username and Email ID using POST method
-<h3>Notice the queryString is not present in the URL as the query string is sent in the body</h3>
-<form action="FirstServlet" method="post">
-Username: <input type="text" name="uname"><br/>
-Email ID: <input type="text" name="email"><br/>
-<input type="submit"> <br/>
-
-</form>
-<br/>
-<br/>
-<p>&copy 2016 Preetham</p>
-</body>
+  <head>
+    <title>Simple Java Web App Demo</title>
+  </head>
+  <body>
+    <h1>Simple Java Web App Demo</h1>
+    <h2>Example #1 - Generate website using servlet</h2>
+    <p>To invoke a simple Java servlet click <a href="SimpleServlet">here</a></p>
+    <h2>Example #2 - Pass data to servlet</h2>
+    <p>To invoke Java servlet and pass data to it fill the form below and hit the "Submit" button</p>
+    <br/>
+    <form action="FormServlet" method="POST">
+      First Name: <input type="text" name="first_name">
+      <br />
+      Last Name: <input type="text" name="last_name" />
+      <input type="submit" value="Submit" />
+    </form>
+    <h2>Example #3 - Access website with visitor count tracking</h2>
+    <p>To invoke the counting servlet click <a href="CounterServlet">here</a></p>
+    <h2>Example #4 - Show total number of visits</h2>
+    <p>To invoke the servlet click <a href="CounterViewServlet">here</a></p>
+  </body>
 </html>
